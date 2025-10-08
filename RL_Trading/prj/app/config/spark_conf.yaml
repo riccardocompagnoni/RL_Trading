@@ -1,0 +1,7 @@
+"basic":
+  "spark.cores.max": "8"
+  "spark.driver.memory": "16g"
+  "spark.executor.memory": "16g"
+  "spark.sql.execution.arrow.pyspark.enabled": "true"
+  "dfs.client.read.shortcircuit.skip.checksum": "true"
+  

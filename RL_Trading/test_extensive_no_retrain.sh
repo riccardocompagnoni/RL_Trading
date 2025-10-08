@@ -1,0 +1,9 @@
+experiments=("FQI_1516_17_multiseed_dfqi_optimize_trajectory_test_observed_persistence_10_60_delta_prices_9_17" "FQI_1516_17_multiseed_dfqi_optimize_trajectory_test_observed_persistence_10" "FQI_1516_17_multiseed_dfqi_optimize_trajectory_test_observed_persistence_60_60_delta_prices_9_17" "FQI_1516_17_multiseed_dfqi_optimize_trajectory_test_observed_persistence_60_start_9" "FQI_1516_17_multiseed_dfqi_optimized_trajectory_ohe_no_skip_test_observed" "FQI_1718_19_multiseed_dfqi_optimize_trajectory_test_observed_persistence_10_volumes" "FQI_1718_19_multiseed_dfqi_optimize_trajectory_test_observed_persistence_60_start_9" "FQI_1718_19_multiseed_dfqi_optimized_trajectory_ohe_no_skip_test_observed" "FQI_1718_19_multiseed_dfqi_optimized_trajectory_ohe_skip_conte_I_skip_covid_test" "FQI_2021_22_multiseed_dfqi_optimized_trajectory_ohe_no_skip_test_observed")
+# Iterate over the array
+for experiment in "${experiments[@]}"
+do
+    echo "Running $experiment"
+    # Add commands to run each experiment here
+    python3 prj/app/core/fqi/services/test_up_to_year.py --study_name $experiment
+
+done

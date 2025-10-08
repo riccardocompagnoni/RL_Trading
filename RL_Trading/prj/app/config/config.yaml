@@ -1,0 +1,826 @@
+window_d_lob: "1 minutes"
+window_d_trades: "1 minutes"
+d1_window: 60
+dp_window: 0
+dm_window: 0
+persistence: 1
+date:
+  train: "2021-09-01"
+  test: "2021-10-01"
+
+anomalous_dates:
+#Negative spread dates
+  - 2020-03-02
+  - 2022-07-11
+  - 2022-10-05
+  - 2024-06-14
+#Incorrect data
+  - 2022-01-01
+  - 2022-01-02
+  - 2022-01-03
+  - 2022-01-04
+  - 2022-01-05
+  - 2022-01-06
+  - 2022-01-07
+  - 2022-01-08
+  - 2022-01-09
+  - 2022-01-10
+  - 2022-01-11
+  - 2022-01-12
+  - 2022-01-13
+  - 2022-01-14
+  - 2022-01-15
+  - 2022-01-16
+  - 2022-01-17
+  - 2022-01-18
+  - 2022-01-19
+  - 2022-01-20
+  - 2022-01-21
+  - 2022-01-22
+  - 2022-01-23
+  - 2022-01-24
+  - 2022-01-25
+  - 2022-01-26
+  - 2022-01-27
+  - 2022-01-28
+  - 2022-01-29
+  - 2022-01-30
+  - 2022-01-31
+  - 2022-02-01
+  - 2022-02-02
+  - 2022-02-03
+  - 2022-02-04
+  - 2022-02-05
+  - 2022-02-06
+  - 2022-02-07
+  - 2022-02-08
+  - 2022-02-09
+  - 2022-02-10
+  - 2022-02-11
+  - 2022-02-12
+  - 2022-02-13
+  - 2022-02-14
+  - 2022-02-15
+  - 2022-02-16
+  - 2022-02-17
+  - 2022-02-18
+  - 2022-02-19
+  - 2022-02-20
+  - 2022-02-21
+  - 2022-02-22
+  - 2022-02-23
+  - 2022-02-24
+  - 2022-02-25
+  - 2022-02-26
+  - 2022-02-27
+  - 2022-02-28
+#High fluctuations of mid price
+  - 2021-01-12
+  - 2021-10-06
+  - 2021-10-08
+  - 2021-10-13
+  - 2021-12-22
+  - 2022-03-07
+  - 2022-04-15
+  - 2022-04-16
+  - 2022-04-17
+  - 2022-04-18
+  - 2022-04-19
+#Too much missing data
+  - 2020-03-10
+  - 2020-03-20
+  - 2021-12-24
+
+
+events:
+  conte_I_period:
+    - 2018-05-15
+    - 2018-06-06
+  covid_period:
+    - 2020-03-01
+    - 2020-04-01
+roll_chains:
+  2010-03-08:
+    - "FBTPH0-M0"
+    - "FBTPM0-U0"
+    - "FBTPU0-Z0"
+  2010-06-08:
+    - "FBTPM0-U0"
+    - "FBTPU0-Z0"
+    - "FBTPZ0-H1"
+  2010-09-08:
+    - "FBTPU0-Z0"
+    - "FBTPZ0-H1"
+    - "FBTPH1-M1"
+  2010-12-08:
+    - "FBTPZ0-H1"
+    - "FBTPH1-M1"
+    - "FBTPM1-U1"
+  2011-03-08:
+    - "FBTPH1-M1"
+    - "FBTPM1-U1"
+    - "FBTPU1-Z1"
+  2011-06-08:
+    - "FBTPM1-U1"
+    - "FBTPU1-Z1"
+    - "FBTPZ1-H2"
+  2011-09-08:
+    - "FBTPU1-Z1"
+    - "FBTPZ1-H2"
+    - "FBTPH2-M2"
+  2011-12-08:
+    - "FBTPZ1-H2"
+    - "FBTPH2-M2"
+    - "FBTPM2-U2"
+  2012-03-08:
+    - "FBTPH2-M2"
+    - "FBTPM2-U2"
+    - "FBTPU2-Z2"
+  2012-06-07:
+    - "FBTPM2-U2"
+    - "FBTPU2-Z2"
+    - "FBTPZ2-H3"
+  2012-09-06:
+    - "FBTPU2-Z2"
+    - "FBTPZ2-H3"
+    - "FBTPH3-M3"
+  2012-12-06:
+    - "FBTPZ2-H3"
+    - "FBTPH3-M3"
+    - "FBTPM3-U3"
+  2013-03-07:
+    - "FBTPH3-M3"
+    - "FBTPM3-U3"
+    - "FBTPU3-Z3"
+  2013-06-06:
+    - "FBTPM3-U3"
+    - "FBTPU3-Z3"
+    - "FBTPZ3-H4"
+  2013-09-06:
+    - "FBTPU3-Z3"
+    - "FBTPZ3-H4"
+    - "FBTPH4-M4"
+  2013-12-06:
+    - "FBTPZ3-H4"
+    - "FBTPH4-M4"
+    - "FBTPM4-U4"
+  2014-03-06:
+    - "FBTPH4-M4"
+    - "FBTPM4-U4"
+    - "FBTPU4-Z4"
+  2014-06-06:
+    - "FBTPM4-U4"
+    - "FBTPU4-Z4"
+    - "FBTPZ4-H5"
+  2014-09-08:
+    - "FBTPU4-Z4"
+    - "FBTPZ4-H5"
+    - "FBTPH5-M5"
+  2014-12-08:
+    - "FBTPZ4-H5"
+    - "FBTPH5-M5"
+    - "FBTPM5-U5"
+  2015-03-06:
+    - "FBTPH5-M5"
+    - "FBTPM5-U5"
+    - "FBTPU5-Z5"
+  2015-06-08:
+    - "FBTPM5-U5"
+    - "FBTPU5-Z5"
+    - "FBTPZ5-H6"
+  2015-09-08:
+    - "FBTPU5-Z5"
+    - "FBTPZ5-H6"
+    - "FBTPH6-M6"
+  2015-12-08:
+    - "FBTPZ5-H6"
+    - "FBTPH6-M6"
+    - "FBTPM6-U6"
+  2016-03-08:
+    - "FBTPH6-M6"
+    - "FBTPM6-U6"
+    - "FBTPU6-Z6"
+  2016-06-08:
+    - "FBTPM6-U6"
+    - "FBTPU6-Z6"
+    - "FBTPZ6-H7"
+  2016-09-08:
+    - "FBTPU6-Z6"
+    - "FBTPZ6-H7"
+    - "FBTPH7-M7"
+  2016-12-08:
+    - "FBTPZ6-H7"
+    - "FBTPH7-M7"
+    - "FBTPM7-U7"
+  2017-03-08:
+    - "FBTPH7-M7"
+    - "FBTPM7-U7"
+    - "FBTPU7-Z7"
+  2017-06-08:
+    - "FBTPM7-U7"
+    - "FBTPU7-Z7"
+    - "FBTPZ7-H8"
+  2017-09-07:
+    - "FBTPU7-Z7"
+    - "FBTPZ7-H8"
+    - "FBTPH8-M8"
+  2017-12-07:
+    - "FBTPZ7-H8"
+    - "FBTPH8-M8"
+    - "FBTPM8-U8"
+  2018-03-08:
+    - "FBTPH8-M8"
+    - "FBTPM8-U8"
+    - "FBTPU8-Z8"
+  2018-06-07:
+    - "FBTPM8-U8"
+    - "FBTPU8-Z8"
+    - "FBTPZ8-H9"
+  2018-09-06:
+    - "FBTPU8-Z8"
+    - "FBTPZ8-H9"
+    - "FBTPH9-M9"
+  2018-12-06:
+    - "FBTPZ8-H9"
+    - "FBTPH9-M9"
+    - "FBTPM9-U9"
+  2019-03-07:
+    - "FBTPH9-M9"
+    - "FBTPM9-U9"
+    - "FBTPU9-Z9"
+  2019-06-06:
+    - "FBTPM9-U9"
+    - "FBTPU9-Z9"
+    - "FBTPZ9-H0"
+  2019-09-06:
+    - "FBTPU9-Z9"
+    - "FBTPZ9-H0"
+    - "FBTPH0-M0"
+  2019-12-06:
+    - "FBTPZ9-H0"
+    - "FBTPH0-M0"
+    - "FBTPM0-U0"
+  2020-03-06:
+    - "FBTPH0-M0"
+    - "FBTPM0-U0"
+    - "FBTPU0-Z0"
+  2020-06-08:
+    - "FBTPM0-U0"
+    - "FBTPU0-Z0"
+    - "FBTPZ0-H1"
+  2020-09-08:
+    - "FBTPU0-Z0"
+    - "FBTPZ0-H1"
+    - "FBTPH1-M1"
+  2020-12-08:
+    - "FBTPZ0-H1"
+    - "FBTPH1-M1"
+    - "FBTPM1-U1"
+  2021-03-08:
+    - "FBTPH1-M1"
+    - "FBTPM1-U1"
+    - "FBTPU1-Z1"
+  2021-06-08:
+    - "FBTPM1-U1"
+    - "FBTPU1-Z1"
+    - "FBTPZ1-H2"
+  2021-09-08:
+    - "FBTPU1-Z1"
+    - "FBTPZ1-H2"
+    - "FBTPH2-M2"
+  2021-12-08:
+    - "FBTPZ1-H2"
+    - "FBTPH2-M2"
+    - "FBTPM2-U2"
+  2022-03-08:
+    - "FBTPH2-M2"
+    - "FBTPM2-U2"
+    - "FBTPU2-Z2"
+  2022-06-08:
+    - "FBTPM2-U2"
+    - "FBTPU2-Z2"
+    - "FBTPZ2-H3"
+  2022-09-08:
+    - "FBTPU2-Z2"
+    - "FBTPZ2-H3"
+    - "FBTPH3-M3"
+  2022-12-08:
+    - "FBTPZ2-H3"
+    - "FBTPH3-M3"
+    - "FBTPM3-U3"
+  2023-03-08:
+    - "FBTPH3-M3"
+    - "FBTPM3-U3"
+    - "FBTPU3-Z3"
+  2023-06-08:
+    - "FBTPM3-U3"
+    - "FBTPU3-Z3"
+    - "FBTPZ3-H4"
+  2023-09-07:
+    - "FBTPU3-Z3"
+    - "FBTPZ3-H4"
+    - "FBTPH4-M4"
+  2023-12-07:
+    - "FBTPZ3-H4"
+    - "FBTPH4-M4"
+    - "FBTPM4-U4"
+  2024-03-07:
+    - "FBTPH4-M4"
+    - "FBTPM4-U4"
+    - "FBTPU4-Z4"
+  2024-06-06:
+    - "FBTPM4-U4"
+    - "FBTPU4-Z4"
+    - "FBTPZ4-H5"
+  2024-09-06:
+    - "FBTPU4-Z4"
+    - "FBTPZ4-H5"
+    - "FBTPH5-M5"
+  2024-12-06:
+    - "FBTPZ4-H5"
+    - "FBTPH5-M5"
+    - "FBTPM5-U5"
+auctions_source: MEF  # { MEF | Bloomberg }
+bloomberg_auctions_config:
+  bdh_start_date: 2010-01-01
+  auction_types:
+    1M BOT:
+      tickers:
+        bid_to_cover: "IRTA1MBC Index"
+        average_yield: "IRTA1MAY Index"
+        average_price: "IRTA1MAP Index"
+        amount_tendered: "IRTA1MTN Index"
+        amount_allotted: "IRTA1MAC Index"
+    3M BOT:
+      tickers:
+        bid_to_cover: "IRTA3BC Index"
+        average_yield: "IRTA03GY Index"
+        average_price: "IRTA03AP Index"
+        amount_tendered: "IRTA03OF Index"
+        amount_allotted: "IRTA03BD Index"
+    6M BOT:
+      tickers:
+        bid_to_cover: "IRTA6BC Index"
+        average_yield: "IRTA06GY Index"
+        average_price: "IRTA06AP Index"
+        amount_tendered: "IRTA06OF Index"
+        amount_allotted: "IRTA06BD Index"
+      corrections:
+        -
+          action: "drop"
+          date: 2017-04-28
+        -
+          action: "overwrite"
+          date: 2011-01-26
+          column: "amount_allotted"
+          value: 8000
+        -
+          action: "overwrite"
+          date: 2018-06-27
+          column: "amount_allotted"
+          value: 6500
+        -
+          action: "overwrite"
+          date: 2019-07-29
+          column: "amount_allotted"
+          value: 6500
+    9M BOT:
+      tickers:
+        bid_to_cover: "IRTA9MBC Index"
+        average_yield: "IRTA9MAY Index"
+        average_price: "IRTA9MAP Index"
+        amount_tendered: "IRTA9MTN Index"
+        amount_allotted: "IRTA9MAC Index"
+    12M BOT:
+      tickers:
+        bid_to_cover: "IRTA12BC Index"
+        average_yield: "IRTA12GY Index"
+        average_price: "IRTA12AP Index"
+        amount_tendered: "IRTA12OF Index"
+        amount_allotted: "IRTA12BD Index"
+      corrections:
+        -
+          action: "drop"
+          date: 2020-07-07
+        -
+          action: "overwrite"
+          date: 2023-09-12
+          column: "amount_allotted"
+          value: 7000
+    18M BOT:
+      tickers:
+        bid_to_cover: "IRTA18BC Index"
+        average_yield: "IRTA18GY Index"
+        average_price: "IRTA18AP Index"
+        amount_tendered: "IRTA18OF Index"
+        amount_allotted: "IRTA18BD Index"
+    1.5Y BTP:
+      tickers:
+        bid_to_cover: "IRBA18BC Index"
+        average_yield: "IRBA18AY Index"
+        average_price: "IRBA18AP Index"
+        amount_tendered: "IRBA18TN Index"
+        amount_allotted: "IRBA18AC Index"
+    2Y BTP:
+      tickers:
+        bid_to_cover: "IRBA2YBC Index"
+        average_yield: "IRBA2YAY Index"
+        average_price: "IRBA2YAP Index"
+        amount_tendered: "IRBA2YTN Index"
+        amount_allotted: "IRBA2YAC Index"
+      corrections:
+        -
+          action: "overwrite"
+          date: 2022-11-24
+          column: "bid_to_cover"
+          value: 1.91
+        -
+          action: "overwrite"
+          date: 2022-11-24
+          column: "average_yield"
+          value: 2.54
+        -
+          action: "overwrite"
+          date: 2022-11-24
+          column: "amount_allotted"
+          value: 1500
+    3Y BTP:
+      tickers:
+        bid_to_cover: "IRBA03BC Index"
+        average_yield: "IRBA03GY Index"
+        average_price: "IRBA03MP"
+        amount_tendered: "IRBA03OF Index"
+        amount_allotted: "IRBA03BD Index"
+      corrections:
+        -
+          action: "drop"
+          date: 2014-02-27
+        -
+          action: "drop"
+          date: 2021-08-26
+        -
+          action: "overwrite"
+          date: 2023-09-13
+          column: "amount_allotted"
+          value: 3250
+    4Y BTP:
+      tickers:
+        bid_to_cover: "IRBA4YBC Index"
+        average_yield: "IRBA4YAY Index"
+        average_price: "IRBA4YAP Index"
+        amount_tendered: "IRBA4YTN Index"
+        amount_allotted: "IRBA4YAC Index"
+    5Y BTP:
+      tickers:
+        bid_to_cover: "IRBA05BC Index"
+        average_yield: "IRBA05GY Index"
+        average_price: "IRBA05MP"
+        amount_tendered: "IRBA05OF Index"
+        amount_allotted: "IRBA05BD Index"
+      corrections:
+        -
+          action: "overwrite"
+          date: 2012-01-13
+          column: "amount_allotted"
+          value: 970
+        -
+          action: "overwrite"
+          date: 2012-02-14
+          column: "amount_allotted"
+          value: 1313
+    6Y BTP:
+      tickers:
+        bid_to_cover: "IRBA6YBC Index"
+        average_yield: "IRBA6YAY Index"
+        average_price: "IRBA6YAP Index"
+        amount_tendered: "IRBA6YTN Index"
+        amount_allotted: "IRBA6YAC Index"
+    7Y BTP:
+      tickers:
+        bid_to_cover: "IRBA7YBC Index"
+        average_yield: "IRBA7YAY Index"
+        average_price: "IRBA7YAP Index"
+        amount_tendered: "IRBA7YTN Index"
+        amount_allotted: "IRBA7YAC Index"
+      corrections:
+        -
+          action: "overwrite"
+          date: 2023-09-13
+          column: "amount_allotted"
+          value: 4000
+    8Y BTP:
+      tickers:
+        bid_to_cover: "IRBA8YBC Index"
+        average_yield: "IRBA8YAY Index"
+        average_price: "IRBA8YAP Index"
+        amount_tendered: "IRBA8YTN Index"
+        amount_allotted: "IRBA8YAC Index"
+    9Y BTP:
+      tickers:
+        bid_to_cover: "IRBA9YBC Index"
+        average_yield: "IRBA9YAY Index"
+        average_price: "IRBA9YAP Index"
+        amount_tendered: "IRBA9YTN Index"
+        amount_allotted: "IRBA9YAC Index"
+    10Y BTP:
+      tickers:
+        bid_to_cover: "IRBA10BC Index"
+        average_yield: "IRBA10GY Index"
+        average_price: "IRBA10MP"
+        amount_tendered: "IRBA10OF Index"
+        amount_allotted: "IRBA10BD Index"
+    12Y BTP:
+      tickers:
+        bid_to_cover: "IRBA12BC Index"
+        average_yield: "IRBA12AY Index"
+        average_price: "IRBA12AP Index"
+        amount_tendered: "IRBA12TN Index"
+        amount_allotted: "IRBA12AC Index"
+    15Y BTP:
+      tickers:
+        bid_to_cover: "IRBA15BC Index"
+        average_yield: "IRBA15GY Index"
+        average_price: "IRBA15MP"
+        amount_tendered: "IRBA15OF Index"
+        amount_allotted: "IRBA15BD Index"
+      corrections:
+        -
+          action: "overwrite"
+          date: 2010-04-14
+          column: "amount_allotted"
+          value: 2486
+    20Y BTP:
+      tickers:
+        bid_to_cover: "IRBA20BC Index"
+        average_yield: "IRBA20AY Index"
+        average_price: "IRBA20AP Index"
+        amount_tendered: "IRBA20TN Index"
+        amount_allotted: "IRBA20AC Index"
+    25Y BTP:
+      tickers:
+        bid_to_cover: "IRBA25BC Index"
+        average_yield: "IRBA25AY Index"
+        average_price: "IRBA25AP Index"
+        amount_tendered: "IRBA25TN Index"
+        amount_allotted: "IRBA25AC Index"
+    30Y BTP:
+      tickers:
+        bid_to_cover: "IRBA30BC Index"
+        average_yield: "IRBA30GY Index"
+        average_price: "IRBA30MP"
+        amount_tendered: "IRBA30OF Index"
+        amount_allotted: "IRBA30BD Index"
+      corrections:
+        -
+          action: "overwrite"
+          date: 2023-09-13
+          column: "amount_allotted"
+          value: 1500
+        -
+          action: "overwrite"
+          date: 2018-03-13
+          column: "amount_allotted"
+          value: 960
+    40Y BTP:
+      tickers:
+        bid_to_cover: "IRBA40BC Index"
+        average_yield: "IRBA40AY Index"
+        average_price: "IRBA40AP Index"
+        amount_tendered: "IRBA40TN Index"
+        amount_allotted: "IRBA40AC Index"
+    50Y BTP:
+      tickers:
+        bid_to_cover: "IRBA50BC Index"
+        average_yield: "IRBA50AY Index"
+        average_price: "IRBA50AP Index"
+        amount_tendered: "IRBA50TN Index"
+        amount_allotted: "IRBA50AC Index"
+    2Y CCT:
+      tickers:
+        bid_to_cover: "IRCC2YBC Index"
+        average_yield: "IRCC2YAY Index"
+        average_price: "IRCC2YAP Index"
+        amount_tendered: "IRCC2YTN Index"
+        amount_allotted: "IRCC2YAC Index"
+    3Y CCT:
+      tickers:
+        bid_to_cover: "IRCC3YBC Index"
+        average_yield: "IRCC3YAY Index"
+        average_price: "IRCC3YAP Index"
+        amount_tendered: "IRCC3YTN Index"
+        amount_allotted: "IRCC3YAC Index"
+    4Y CCT:
+      tickers:
+        bid_to_cover: "IRCC4YBC Index"
+        average_yield: "IRCC4YAY Index"
+        average_price: "IRCC4YAP Index"
+        amount_tendered: "IRCC4YTN Index"
+        amount_allotted: "IRCC4YAC Index"
+    5Y CCT:
+      tickers:
+        bid_to_cover: "IRCC5YBC Index"
+        average_yield: "IRCC5YAY Index"
+        average_price: "IRCC5YAP Index"
+        amount_tendered: "IRCC5YTN Index"
+        amount_allotted: "IRCC5YAC Index"
+    7Y CCTeu:
+      tickers:
+        bid_to_cover: "IRCC7YBC Index"
+        average_yield: "IRCC7YAY Index"
+        average_price: "IRCC7YAP Index"
+        amount_tendered: "IRCC7YTN Index"
+        amount_allotted: "IRCC7YAC Index"
+      corrections:
+        -
+          action: "drop"
+          date: 2011-03-29
+    2Y CTZ:
+      tickers:
+        bid_to_cover: "IRCA2ZBC Index"
+        average_yield: "IRCA2ZGY Index"
+        average_price: "IRCA2ZMP"
+        amount_tendered: "IRCA2ZOF Index"
+        amount_allotted: "IRCA2ZBD Index"
+      corrections:
+        -
+          action: "overwrite"
+          date: 2011-09-27
+          column: "bid_to_cover"
+          value: 1.572
+        -
+          action: "overwrite"
+          date: 2011-09-27
+          column: "amount_allotted"
+          value: 3500
+        -
+          action: "overwrite"
+          date: 2011-09-27
+          column: "average_yield"
+          value: 1.277
+        -
+          action: "overwrite"
+          date: 2018-08-28
+          column: "average_yield"
+          value: 0.818
+        -
+          action: "overwrite"
+          date: 2019-05-28
+          column: "average_yield"
+          value: 0.818
+    3Y Floater:
+      tickers:
+        bid_to_cover: "IRFL3YBC Index"
+        average_yield: "IRFL3YAY Index"
+        average_price: "IRFL3YAP Index"
+        amount_tendered: "IRFL3YTN Index"
+        amount_allotted: "IRFL3YAC Index"
+    4Y Floater:
+      tickers:
+        bid_to_cover: "IRFL4YBC Index"
+        average_yield: "IRFL4YAY Index"
+        average_price: "IRFL4YAP Index"
+        amount_tendered: "IRFL4YTN Index"
+        amount_allotted: "IRFL4YAC Index"
+    5Y Floater:
+      tickers:
+        bid_to_cover: "IRFL5YBC Index"
+        average_yield: "IRFL5YAY Index"
+        average_price: "IRFL5YAP Index"
+        amount_tendered: "IRFL5YTN Index"
+        amount_allotted: "IRFL5YAC Index"
+    6Y Floater:
+      tickers:
+        bid_to_cover: "IRFL6YBC Index"
+        average_yield: "IRFL6YAY Index"
+        average_price: "IRFL6YAP Index"
+        amount_tendered: "IRFL6YTN Index"
+        amount_allotted: "IRFL6YAC Index"
+    7Y Floater:
+      tickers:
+        bid_to_cover: "IRFL7YBC Index"
+        average_yield: "IRFL7YAY Index"
+        average_price: "IRFL7YAP Index"
+        amount_tendered: "IRFL7YTN Index"
+        amount_allotted: "IRFL7YAC Index"
+    8Y Floater:
+      tickers:
+        bid_to_cover: "IRFL8YBC Index"
+        average_yield: "IRFL8YAY Index"
+        average_price: "IRFL8YAP Index"
+        amount_tendered: "IRFL8YTN Index"
+        amount_allotted: "IRFL8YAC Index"
+    10Y Floater:
+      tickers:
+        bid_to_cover: "IRFL10BC Index"
+        average_yield: "IRFL10AY Index"
+        average_price: "IRFL10AP Index"
+        amount_tendered: "IRFL10TN Index"
+        amount_allotted: "IRFL10AC Index"
+    2Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL2YBC Index"
+        average_yield: "IRIL2YAY Index"
+        average_price: "IRIL2YAP Index"
+        amount_tendered: "IRIL2YTN Index"
+        amount_allotted: "IRIL2YAC Index"
+    3Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL3YBC Index"
+        average_yield: "IRIL3YAY Index"
+        average_price: "IRIL3YAP Index"
+        amount_tendered: "IRIL3YTN Index"
+        amount_allotted: "IRIL3YAC Index"
+    4Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL4YBC Index"
+        average_yield: "IRIL4YAY Index"
+        average_price: "IRIL4YAP Index"
+        amount_tendered: "IRIL4YTN Index"
+        amount_allotted: "IRIL4YAC Index"
+      corrections:
+        -
+          action: "drop"
+          date: 2022-10-28
+    5Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL5YBC Index"
+        average_yield: "IRIL5YAY Index"
+        average_price: "IRIL5YAP Index"
+        amount_tendered: "IRIL5YTN Index"
+        amount_allotted: "IRIL5YAC Index"
+      corrections:
+        -
+          action: "overwrite"
+          date: 2012-05-28
+          column: "amount_allotted"
+          value: 333
+    6Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL6YBC Index"
+        average_yield: "IRIL6YAY Index"
+        average_price: "IRIL6YAP Index"
+        amount_tendered: "IRIL6YTN Index"
+        amount_allotted: "IRIL6YAC Index"
+    7Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL7YBC Index"
+        average_yield: "IRIL7YAY Index"
+        average_price: "IRIL7YAP Index"
+        amount_tendered: "IRIL7YTN Index"
+        amount_allotted: "IRIL7YAC Index"
+    10Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL10BC Index"
+        average_yield: "IRIL10AY Index"
+        average_price: "IRIL10AP Index"
+        amount_tendered: "IRIL10TN Index"
+        amount_allotted: "IRIL10AC Index"
+    12Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL12BC Index"
+        average_yield: "IRIL12AY Index"
+        average_price: "IRIL12AP Index"
+        amount_tendered: "IRIL12TN Index"
+        amount_allotted: "IRIL12AC Index"
+    15Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL15BC Index"
+        average_yield: "IRIL15AY Index"
+        average_price: "IRIL15AP Index"
+        amount_tendered: "IRIL15TN Index"
+        amount_allotted: "IRIL15AC Index"
+    20Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL20BC Index"
+        average_yield: "IRIL20AY Index"
+        average_price: "IRIL20AP Index"
+        amount_tendered: "IRIL20TN Index"
+        amount_allotted: "IRIL20AC Index"
+    25Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL25BC Index"
+        average_yield: "IRIL25AY Index"
+        average_price: "IRIL25AP Index"
+        amount_tendered: "IRIL25TN Index"
+        amount_allotted: "IRIL25AC Index"
+    30Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL30BC Index"
+        average_yield: "IRIL30AY Index"
+        average_price: "IRIL30AP Index"
+        amount_tendered: "IRIL30TN Index"
+        amount_allotted: "IRIL30AC Index"
+    40Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL40BC Index"
+        average_yield: "IRIL40AY Index"
+        average_price: "IRIL40AP Index"
+        amount_tendered: "IRIL40TN Index"
+        amount_allotted: "IRIL40AC Index"
+    50Y Inflation:
+      tickers:
+        bid_to_cover: "IRIL50BC Index"
+        average_yield: "IRIL50AY Index"
+        average_price: "IRIL50AP Index"
+        amount_tendered: "IRIL50TN Index"
+        amount_allotted: "IRIL50AC Index"

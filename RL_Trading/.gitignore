@@ -1,0 +1,9 @@
+__pycache__/
+.idea/
+.DS_Store
+*.ipynb_checkpoints
+*.zip
+results/
+prj/app/core/data/M1.csv
+prj/app/core/data/M1_ICE.csv
+prj/app/core/data/M1_trades.csv
